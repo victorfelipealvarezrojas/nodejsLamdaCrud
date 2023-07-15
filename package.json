@@ -1,0 +1,19 @@
+{
+  "name": "gestion-empleados-api",
+  "version": "1.0.0",
+  "main": "handler.js",
+  "author": "victorr avarez rojas",
+  "license": "MIT",
+  "scripts": {
+    "deploy:dev": "serverless deploy --stage dev --region us-east-1",
+    "remove:dev": "serverless remove --stage dev --region us-east-1",
+    "start:dev": "serverless offline --stage dev --region us-east-1"
+  },
+  "dependencies": {
+    "graceful-fs": "^4.2.11",
+    "http-status-codes": "^2.2.0",
+    "knex": "^2.5.1",
+    "mysql": "^2.18.1",
+    "serverless-offline": "^12.0.4"
+  }
+}

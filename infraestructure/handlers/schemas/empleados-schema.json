@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "EmpleadoInputModel",
+  "description": "Modelo de entrada para la creación de un empleado",
+  "type": "object",
+  "properties": {
+    "primerNombre": {
+      "description": "Primer nombre del empleado",
+      "type": "string",
+      "maxLength": 20,
+      "minLength": 3
+    },
+    "segundoNombre": {
+      "description": "Segundo nombre del empleado",
+      "type": "string",
+      "maxLength": 20,
+      "minLength": 3
+    },
+    "primerApellido": {
+      "description": "Primer apellido del empleado",
+      "type": "string",
+      "maxLength": 20,
+      "minLength": 3
+    },
+    "segundoApellido": {
+      "description": "Segundo apellido del empleado",
+      "type": "string",
+      "maxLength": 20,
+      "minLength": 3
+    },
+    "fechaNacimiento": {
+      "description": "Fecha de nacimiento del empleado",
+      "type": "string",
+      "pattern": "([1-2][0-9][0-9][0-9])-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$"
+    },
+    "tipoIdentificacion": {
+      "description": "Tipo de identificación del empleado",
+      "enum": ["cc", "pas", "otro"]
+    },
+    "numeroIdentificacion": {
+      "description": "Número de identificación del empleado",
+      "type": "string",
+      "minimum": 1,
+      "maxLength": 15
+    },
+    "sueldo": {
+      "description": "Sueldo del empleado",
+      "type": "number",
+      "minimum": 100,
+      "maximum": 999999
+    }
+  },
+  "required": [
+    "primerNombre",
+    "segundoNombre",
+    "primerApellido",
+    "segundoApellido",
+    "fechaNacimiento",
+    "tipoIdentificacion",
+    "numeroIdentificacion",
+    "sueldo"
+  ]
+}

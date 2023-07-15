@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>EmpleadoInputModel</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+</head>
+<body>
+    <div xmlns:json="http://json-schema.org" json:schema="http://json-schema.org/draft-04/schema#">
+        <json:object>
+            <json:property name="primerNombre">
+                <json:description>Primer nombre del empleado</json:description>
+                <json:string>
+                    <json:maxLength>20</json:maxLength>
+                    <json:minLength>3</json:minLength>
+                </json:string>
+            </json:property>
+            <json:property name="segundoNombre">
+                <json:description>Segundo nombre del empleado</json:description>
+                <json:string>
+                    <json:maxLength>20</json:maxLength>
+                    <json:minLength>3</json:minLength>
+                </json:string>
+            </json:property>
+            <json:property name="primerApellido">
+                <json:description>Primer apellido del empleado</json:description>
+                <json:string>
+                    <json:maxLength>20</json:maxLength>
+                    <json:minLength>3</json:minLength>
+                </json:string>
+            </json:property>
+            <json:property name="segundoApellido">
+                <json:description>Segundo apellido del empleado</json:description>
+                <json:string>
+                    <json:maxLength>20</json:maxLength>
+                    <json:minLength>3</json:minLength>
+                </json:string>
+            </json:property>
+            <json:property name="fechaNacimiento">
+                <json:description>Fecha de nacimiento del empleado</json:description>
+                <json:string>
+                    <json:pattern>([1-2][0-9][0-9][0-9])-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$</json:pattern>
+                </json:string>
+            </json:property>
+            <json:property name="tipoIdentificacion">
+                <json:description>Tipo de identificación del empleado</json:description>
+                <json:string>
+                    <json:enum>
+                        <json:value>cc</json:value>
+                        <json:value>pas</json:value>
+                        <json:value>otro</json:value>
+                    </json:enum>
+                </json:string>
+            </json:property>
+            <json:property name="numeroIdentificacion">
+                <json:description>Número de identificación del empleado</json:description>
+                <json:string>
+                    <json:minLength>1</json:minLength>
+                    <json:maxLength>15</json:maxLength>
+                </json:string>
+            </json:property>
+            <json:property name="sueldo">
+                <json:description>Sueldo del empleado</json:description>
+                <json:number>
+                    <json:minimum>100</json:minimum>
+                    <json:maximum>999999</json:maximum>
+                </json:number>
+            </json:property>
+        </json:object>
+    </div>
+</body>
+</html>
